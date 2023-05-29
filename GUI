@@ -371,7 +371,10 @@ function Alter.CreateLib(AltName, themeList)
         tabName = tabName or "Tab"
         local tabButton = Instance.new("TextButton")
         local UICorner = Instance.new("UICorner")
-        local page = Instance.new("ScrollingFrame")
+        
+	--this part of the code is also not functioning as expected but it should function perfectly 
+	local page = Instance.new("ScrollingFrame")
+	--scrolling frame is not accsseable for mobile users leading to majour issues as there are multiple tabs in main
         local pageListing = Instance.new("UIListLayout")
 
         local function UpdateSize()
