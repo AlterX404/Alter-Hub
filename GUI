@@ -145,7 +145,7 @@ function Alter:ToggleUI()
     end
 end
 
-function Alter.CreateLib(kavName, themeList)
+function Alter.CreateLib(AltName, themeList)
     if not themeList then
         themeList = themes
     end
@@ -183,10 +183,10 @@ function Alter.CreateLib(kavName, themeList)
 
     themeList = themeList or {}
     local selectedTab 
-    kavName = kavName or "Library"
-    table.insert(Alter, kavName)
+    AltName = AltName or "Library"
+    table.insert(Alter, AltName)
     for i,v in pairs(game.CoreGui:GetChildren()) do
-        if v:IsA("ScreenGui") and v.Name == kavName then
+        if v:IsA("ScreenGui") and v.Name == AltName then
             v:Destroy()
         end
     end
@@ -262,7 +262,7 @@ function Alter.CreateLib(kavName, themeList)
     title.Size = UDim2.new(0, 204, 0, 8)
     title.Font = Enum.Font.Gotham
     title.RichText = true
-    title.Text = kavName
+    title.Text = AltName
     title.TextColor3 = Color3.fromRGB(245, 245, 245)
     title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
