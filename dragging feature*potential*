@@ -1,0 +1,37 @@
+function Alter:DraggingEnabled(frame, parent)
+    parent = parent or frame
+    local dragging = false
+    local dragInput, startPos, frameStartPos
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch and #input.Touches == 1 then
+            dragging = true
+            startPos = input.Position
+            frameStartPos = parent.Position
+        end
+    end)
+
+    frame.InputChanged:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch and #input.Touches == 1 then
+            dragInput = input
+        end
+    end)
+
+    frame.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch and #input.Touches == 1 and input == dragInput then
+            dragging = false
+        end
+    end)
+
+    input.TouchMoved:Connect(function(input)
+        if input == dragInput and dragging then
+            local delta = input.Position - startPos
+            parent.Position = UDim2.new(
+                frameStartPos.X.Scale,
+                frameStartPos.X.Offset + delta.X,
+                frameStartPos.Y.Scale,
+                frameStartPos.Y.Offset + delta.Y
+            )
+        end
+    end)
+end
