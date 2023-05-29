@@ -7,6 +7,7 @@ local run = game:GetService("RunService")
 
 local Utility = {}
 local Objects = {}
+--still dosenot work for mobile users i tried to intergtare  another similar dragging feture for mobile but the script would not execute*
 function Alter:DraggingEnabled(frame, parent)
         
     parent = parent or frame
