@@ -1,5 +1,5 @@
 -- Load the library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/GUI/main/base%20UI%20functions"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Hub/main/GUI"))()
 
 -- Create the window
 local Window = Library.CreateLib("Alter-Hub", "BloodTheme")
