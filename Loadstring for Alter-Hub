@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Hub/main/Alter-Hub"))()
