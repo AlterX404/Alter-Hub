@@ -1,5 +1,5 @@
 -- Load the library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/GUI/main/base%20UI%20functions"))()
 
 -- Create the window
 local Window = Library.CreateLib("Alter-Hub", "BloodTheme")
@@ -50,6 +50,32 @@ end)
 UniversalSection:NewButton("Ultimate Trolls", "just trolls", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyaboivincentt5315/script/main/VHub.txt'), true))()
 end)
+
+
+--Project_Slayers
+if game.PlaceID == 5956785391 then 
+    local Project_Slayers = Window:NewTab("PROJECT SLAYERS")
+    local Project_SlayersSection = Project_Slayers:NewSection("PROJECT SLAYERS SCRIPTS")
+    
+    Project_SlayersSection:NewButton("SYLVEON Hub", "PROJECT SLAYERS SCRIPT", function()
+        local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+        repeat wait() until game:IsLoaded()
+        loadstring(game:HttpGet(LoaderUrl))()
+    end)
+    
+    Project_SlayersSection:NewButton("PROJECT SLAYERS (VG)", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+    
+    Project_SlayersSection:NewButton("auto farm, inf stamina, inf breathing and more", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+    
+    Project_SlayersSection:NewButton("Lead Hub", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
+    end)
+end
+
 
 -- Blox Fruits
 if game.PlaceID == 2753915549 or game.PlaceID == 4442272183 or game.PlaceID == 7449423635 then 
@@ -241,29 +267,10 @@ if game.PlaceID == 6872265039 then
     end)
 end
 
---Project_Slayers
-if game.PlaceID == 5956785391 then 
-    local Project_Slayers = Window:NewTab("PROJECT SLAYERS")
-    local Project_SlayersSection = Project_Slayers:NewSection("PROJECT SLAYERS SCRIPTS")
-    
-    Project_SlayersSection:NewButton("SYLVEON Hub", "PROJECT SLAYERS SCRIPT", function()
-        local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
-        repeat wait() until game:IsLoaded()
-        loadstring(game:HttpGet(LoaderUrl))()
-    end)
-    
-    Project_SlayersSection:NewButton("PROJECT SLAYERS (VG)", "PROJECT SLAYERS SCRIPT", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-    end)
-    
-    Project_SlayersSection:NewButton("auto farm, inf stamina, inf breathing and more", "PROJECT SLAYERS SCRIPT", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-    end)
-    
-    Project_SlayersSection:NewButton("Lead Hub", "PROJECT SLAYERS SCRIPT", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
-    end)
-end
+
+
+
+
 
 
 
