@@ -53,6 +53,7 @@ end)
 
 
 --Project_Slayers
+--problems with if statement, execution stops once it reaches if statement , code before if statement is exe. perfectly  
 if game.PlaceID == 5956785391 then 
     local Project_Slayers = Window:NewTab("PROJECT SLAYERS")
     local Project_SlayersSection = Project_Slayers:NewSection("PROJECT SLAYERS SCRIPTS")
