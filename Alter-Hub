@@ -1,0 +1,269 @@
+-- Load the library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+-- Create the window
+local Window = Library.CreateLib("Alter-Hub", "BloodTheme")
+
+-- CREDITS
+local Other = Window:NewTab("CREDITS")
+local OtherSection = Other:NewSection("CREDITS")
+local OtherSection = Other:NewSection("ALL CREDITS GO TO ALTER-X#5868")
+OtherSection:NewButton("GO SUBSCRIBE TO ALTER-X ON YOUTUBE FOR MORE SCRIPTS", "SUBSCRIBE NOW!!!!!!!", function()
+    local link = "https://www.youtube.com/channel/UCBTkrkGEibTUayqVvs8G5fg"
+    -- Open link in default browser
+    syn.open_url(link)
+end)
+
+-- LOCAL PLAYER
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+
+PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+-- Universal scripts
+local Universal = Window:NewTab("Universal Scripts")
+local UniversalSection = Universal:NewSection("Universal Flight")
+
+UniversalSection:NewButton("Flight", "Makes You Fly", function()
+    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+end)
+
+UniversalSection:NewButton("Troll Face", "you can change everyone's face", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/saMtiek2", true))()
+end)
+
+UniversalSection:NewButton("Infinity Yield", "It's INF yield, you can do anything", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+UniversalSection:NewButton("Ultimate Trolls", "just trolls", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/itsyaboivincentt5315/script/main/VHub.txt'), true))()
+end)
+
+-- Blox Fruits
+if game.PlaceID == 2753915549 or game.PlaceID == 4442272183 or game.PlaceID == 7449423635 then 
+    local BF = Window:NewTab("Blox Fruits")
+    local BFSection = BF:NewSection("All Blox Fruits Scripts")
+
+    BFSection:NewButton("OP BF Script", "Blox Fruits Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+    end)
+
+    BFSection:NewButton("Thunder Hub", "Blox Fruits Script", function()
+        _G.ThunderVersion = "Mobile"
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ThunderZ-05/HUB/main/Script"))()
+    end)
+
+    BFSection:NewButton("Ho-Ho Hub", "Blox Fruits Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+    end)
+
+    BFSection:NewButton("Auto Farm", "Blox Fruits Script", function()
+        _G.Color = Color3.fromRGB(0, 255, 17)
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/PowerxCANDYYY/BFFREE/main/POWERX.lua"), true))()
+    end)
+
+    BFSection:NewButton("Lunar Hub", "Blox Fruits Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Cve-Hub/LnHub/main/README.md'))()
+    end)
+
+    BFSection:NewButton("Maruko Hub", "Blox Fruits Script", function()
+        loadstring(game:HttpGet"https://mukuroxquartyz.xyz/Lua/script.lua")()
+    end)
+
+    BFSection:NewButton("Black Trap", "Blox Fruits Script", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
+    end)
+end
+
+
+--Project_Meow
+local Project_Meow = Window:NewTab("Project Meow")
+local Project_MeowSection = Project_Meow:NewSection("Project Meow")
+
+Project_MeowSection:NewButton("Project Meow", "Project Meow [+] Key: NarutoSupported Games:Pet Simulator X•BloxFruit•Anime Battlegrounds X•Anime Fighters•Mad City•Shindo Life•Murder Mystery 2•Ninja Legends•Legends Of Speed•JailBreak", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Project-Meow_421"))()
+end)
+
+
+-- DOORS
+if game.PlaceID == 6516141723 then
+    local DOORS = Window:NewTab("DOORS")
+    local DOORSSection = DOORS:NewSection("All DOORS Scripts")
+
+    DOORSSection:NewButton("DOORS Script-1", "DOORS Script-1", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/iCherryKardes/Doors-Hub/main/Hub%202.1"))()
+    end)
+
+    DOORSSection:NewButton("DOORS Script-2", "DOORS Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Doors"))()
+    end)
+
+    DOORSSection:NewButton("DOORS Script-3", "DOORS Script", function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSDOORS.lua"), true))()
+    end)
+
+    DOORSSection:NewButton("DOORS Script-4", "DOORS Script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Muhammad6196/Project-WD/main/Mainstring.lua"))()
+    end)
+
+    DOORSSection:NewButton("DOORS Script-5", "DOORS Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
+    end)
+end
+
+--BROOKHEAVEN
+if game.PlaceID == 4924922222 then
+    local BROOKHEAVEN = Window:NewTab("BROOKHEAVEN")
+    local BROOKHEAVENSection = BROOKHEAVEN:NewSection("BROOKHEAVEN Scripts")
+    
+    BROOKHEAVENSection:NewButton("ADMIN PANEL", "BROOKHEAVEN Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end)
+    
+    BROOKHEAVENSection:NewButton("BROOKHEAVEN Script (RANDOM)", "BROOKHEAVEN Script", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven'))()
+    end)
+end
+
+--shindo_life
+if game.PlaceID == 4616652839 then
+    local shindo_life = Window:NewTab("Shindo life")
+    local shindo_lifeSection = shindo_life:NewSection("Shindo life")
+    
+    shindo_lifeSection:NewButton("Shindo Life Script", "just use it already", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PremierHub/Data/main/code.lua"))()
+    end)
+end
+
+--King_Legacy
+if game.PlaceID == 4520749081 or game.PlaceID == 6381829480 then 
+    local King_Legacy = Window:NewTab("King Legacy")
+    local King_LegacySection = King_Legacy:NewSection("King Legacy")
+    
+    King_LegacySection:NewButton("HO-HO HUB", "King Legacy SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+    end)
+    
+    King_LegacySection:NewButton("OP-KL", "King Legacy SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/SHAREHACK/bloxfruit/main/free'))()
+    end)
+    
+    King_LegacySection:NewButton("Muruko Hub", "King Legacy SCRIPT", function()
+        loadstring(game:HttpGet("https://mukuroxquartyz.xyz/Lua/script.lua"))()
+    end)
+end
+
+-- DA_HOOD
+if game.PlaceID == 2788229376 then 
+    local DA_HOOD = Window:NewTab("DA HOOD")
+    local DA_HOODSection = DA_HOOD:NewSection("DA HOOD SCRIPTS")
+    
+    DA_HOODSection:NewButton("INF HEALTH", "ITS JUST YOUR REGULAR SCRIPT", function()
+        local Player = game.Players.LocalPlayer
+        Player.Character.Humanoid.Health = math.huge
+    end)
+    
+    DA_HOODSection:NewButton("SUPER JUMP", "ITS JUST YOUR REGULAR SCRIPT", function()
+        local Player = game.Players.LocalPlayer
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        Player.Character.Humanoid.JumpPower = 100
+    end)
+    
+    DA_HOODSection:NewButton("FLY", "ITS JUST YOUR REGULAR SCRIPT", function()
+        local Player = game.Players.LocalPlayer
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+        wait()
+        Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+    end)
+end
+
+--Arsenal
+if game.PlaceID == 286090429 then 
+    local Arsenal = Window:NewTab("Arsenal")
+    local ArsenalSection = Arsenal:NewSection("Arsenal scripts")
+    
+    ArsenalSection:NewButton("Aimbot", "gives you aimbot", function()
+        local Players = game:GetService("Players")
+    
+        local function Aimbot()
+            for _, player in ipairs(Players:GetPlayers()) do
+                if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("Head") then
+                    local head = player.Character.Head
+                    local target = head.Position + Vector3.new(0, 1, 0)
+                    
+                    game:GetService("Workspace").CurrentCamera.CFrame = CFrame.new(game:GetService("Workspace").CurrentCamera.CFrame.Position, target)
+                end
+            end
+        end
+        
+        while true do
+            wait(0.1)
+            Aimbot()
+        end
+    end)
+    
+    ArsenalSection:NewButton("inf damage", "gives you inf damage", function()
+        local DamageValue = math.huge
+    
+        game:GetService("ReplicatedStorage").RemoteEvent:FireServer(DamageValue)
+    end)
+end
+
+--Flee_The_Facility
+if game.PlaceID == 893973440 then  
+    local Flee_The_Facility = Window:NewTab("Flee The Facility")
+    local Flee_The_FacilitySection = Flee_The_Facility:NewSection("Flee The Facility Scripts")
+    
+    Flee_The_FacilitySection:NewButton("Flee The Facility", "Flee The Facility script", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifty96/ftfgui/main/ftfgui", true))()
+    end)
+end
+
+--Bed_Wars
+if game.PlaceID == 6872265039 then
+    local Bed_Wars = Window:NewTab("Bed Wars")
+    local Bed_WarsSection = Bed_Wars:NewSection("Bed Wars")
+    
+    Bed_WarsSection:NewButton("Best Bedwars Script (OP)", "Best Bedwars Script (OP)", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/ELCkygpv", true))()
+    end)
+end
+
+--Project_Slayers
+if game.PlaceID == 5956785391 then 
+    local Project_Slayers = Window:NewTab("PROJECT SLAYERS")
+    local Project_SlayersSection = Project_Slayers:NewSection("PROJECT SLAYERS SCRIPTS")
+    
+    Project_SlayersSection:NewButton("SYLVEON Hub", "PROJECT SLAYERS SCRIPT", function()
+        local LoaderUrl = "https://raw.githubusercontent.com/ogamertv12/SylveonHub/main/Mobile.lua"
+        repeat wait() until game:IsLoaded()
+        loadstring(game:HttpGet(LoaderUrl))()
+    end)
+    
+    Project_SlayersSection:NewButton("PROJECT SLAYERS (VG)", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+    
+    Project_SlayersSection:NewButton("auto farm, inf stamina, inf breathing and more", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+    
+    Project_SlayersSection:NewButton("Lead Hub", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
+    end)
+end
+
+
+
