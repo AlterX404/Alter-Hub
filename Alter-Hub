@@ -1,5 +1,5 @@
 -- Load the library
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Hub/main/GUI"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/GUI/main/base%20UI%20functions"))()
 
 -- Create the window
 local Window = Library.CreateLib("Alter-Hub", "BloodTheme")
@@ -53,8 +53,7 @@ end)
 
 
 --Project_Slayers
---problems with if statement, execution stops once it reaches if statement , code before if statement is exe. perfectly  
-if game.PlaceID == 5956785391 then 
+
     local Project_Slayers = Window:NewTab("PROJECT SLAYERS")
     local Project_SlayersSection = Project_Slayers:NewSection("PROJECT SLAYERS SCRIPTS")
     
@@ -68,18 +67,18 @@ if game.PlaceID == 5956785391 then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
     end)
     
-    Project_SlayersSection:NewButton("auto farm, inf stamina, inf breathing and more", "PROJECT SLAYERS SCRIPT", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    Project_SlayersSection:NewButton("Flowers hub", "PROJECT SLAYERS SCRIPT", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XO-3S-CL-VCK-jf-3HDM/Products/main/Flowers-Farm.lua"))()
     end)
     
     Project_SlayersSection:NewButton("Lead Hub", "PROJECT SLAYERS SCRIPT", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
     end)
-end
+
 
 
 -- Blox Fruits
-if game.PlaceID == 2753915549 or game.PlaceID == 4442272183 or game.PlaceID == 7449423635 then 
+
     local BF = Window:NewTab("Blox Fruits")
     local BFSection = BF:NewSection("All Blox Fruits Scripts")
 
@@ -112,8 +111,6 @@ if game.PlaceID == 2753915549 or game.PlaceID == 4442272183 or game.PlaceID == 7
     BFSection:NewButton("Black Trap", "Blox Fruits Script", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
     end)
-end
-
 
 --Project_Meow
 local Project_Meow = Window:NewTab("Project Meow")
@@ -124,8 +121,7 @@ Project_MeowSection:NewButton("Project Meow", "Project Meow [+] Key: NarutoSuppo
 end)
 
 
--- DOORS
-if game.PlaceID == 6516141723 then
+ -- DOORS
     local DOORS = Window:NewTab("DOORS")
     local DOORSSection = DOORS:NewSection("All DOORS Scripts")
 
@@ -148,10 +144,9 @@ if game.PlaceID == 6516141723 then
     DOORSSection:NewButton("DOORS Script-5", "DOORS Script", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/zoophiliaphobic/POOPDOORS/main/script.lua'))()
     end)
-end
 
---BROOKHEAVEN
-if game.PlaceID == 4924922222 then
+
+ --BROOKHEAVEN
     local BROOKHEAVEN = Window:NewTab("BROOKHEAVEN")
     local BROOKHEAVENSection = BROOKHEAVEN:NewSection("BROOKHEAVEN Scripts")
     
@@ -162,20 +157,17 @@ if game.PlaceID == 4924922222 then
     BROOKHEAVENSection:NewButton("BROOKHEAVEN Script (RANDOM)", "BROOKHEAVEN Script", function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven'))()
     end)
-end
 
---shindo_life
-if game.PlaceID == 4616652839 then
+
+ --shindo_life
     local shindo_life = Window:NewTab("Shindo life")
     local shindo_lifeSection = shindo_life:NewSection("Shindo life")
     
     shindo_lifeSection:NewButton("Shindo Life Script", "just use it already", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/PremierHub/Data/main/code.lua"))()
     end)
-end
 
---King_Legacy
-if game.PlaceID == 4520749081 or game.PlaceID == 6381829480 then 
+ --King_Legacy
     local King_Legacy = Window:NewTab("King Legacy")
     local King_LegacySection = King_Legacy:NewSection("King Legacy")
     
@@ -190,10 +182,9 @@ if game.PlaceID == 4520749081 or game.PlaceID == 6381829480 then
     King_LegacySection:NewButton("Muruko Hub", "King Legacy SCRIPT", function()
         loadstring(game:HttpGet("https://mukuroxquartyz.xyz/Lua/script.lua"))()
     end)
-end
 
--- DA_HOOD
-if game.PlaceID == 2788229376 then 
+
+ -- DA_HOOD
     local DA_HOOD = Window:NewTab("DA HOOD")
     local DA_HOODSection = DA_HOOD:NewSection("DA HOOD SCRIPTS")
     
@@ -214,10 +205,9 @@ if game.PlaceID == 2788229376 then
         wait()
         Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
     end)
-end
 
---Arsenal
-if game.PlaceID == 286090429 then 
+
+ --Arsenal
     local Arsenal = Window:NewTab("Arsenal")
     local ArsenalSection = Arsenal:NewSection("Arsenal scripts")
     
@@ -246,30 +236,25 @@ if game.PlaceID == 286090429 then
     
         game:GetService("ReplicatedStorage").RemoteEvent:FireServer(DamageValue)
     end)
-end
 
---Flee_The_Facility
-if game.PlaceID == 893973440 then  
+
+ --Flee_The_Facility
+
     local Flee_The_Facility = Window:NewTab("Flee The Facility")
     local Flee_The_FacilitySection = Flee_The_Facility:NewSection("Flee The Facility Scripts")
     
     Flee_The_FacilitySection:NewButton("Flee The Facility", "Flee The Facility script", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifty96/ftfgui/main/ftfgui", true))()
     end)
-end
 
---Bed_Wars
-if game.PlaceID == 6872265039 then
+ --Bed_Wars
+ 
     local Bed_Wars = Window:NewTab("Bed Wars")
     local Bed_WarsSection = Bed_Wars:NewSection("Bed Wars")
     
     Bed_WarsSection:NewButton("Best Bedwars Script (OP)", "Best Bedwars Script (OP)", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/ELCkygpv", true))()
     end)
-end
-
-
-
 
 
 
