@@ -258,6 +258,9 @@ local AlterHub = Window:Server("Alter-Hub", "")
     Flee_The_FacilitySection:Button("Flee The Facility", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifty96/ftfgui/main/ftfgui", true))()
     end)
-  
+
+
+
+--    
 -- Load Notification
     Library:Notification("Notification", "Alter-hub GUI loaded!", "Okay!")
