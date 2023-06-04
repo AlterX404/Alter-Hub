@@ -2,28 +2,52 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Alter
 local Window = Library:Window("Alter-Hub")
 local AlterHub = Window:Server("Alter-Hub", "")
 
--- LOCAL PLAYER
-    local PlayerSection = AlterHub:Channel("Player")
-
-    local walkspeedSlider = PlayerSection:Slider("Walkspeed", 16, 500, 200, function(value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
-    end)
-
-    PlayerSection:Button("Reset WalkSpeed", function()
-        walkspeedSlider:Change(16)
-    end)
-
-    local jumpHeightSlider = PlayerSection:Slider("JumpHeight", 50, 350, 50, function(value)
-        game.Players.LocalPlayer.Character.Humanoid.JumpHeight = value
-    end)
-
-    PlayerSection:Button("Reset JumpHeight", function()
-        jumpHeightSlider:Change(50)
-    end)
-
--- Universal Scripts
+-- Universal Scripts 
     local UniversalSection = AlterHub:Channel("Universal Scripts")
 
+	UniversalSection:Label("Player Controls")
+	UniversalSection:Seperator() 
+	    local walkspeedSlider
+	local jumpHeightSlider
+	
+	local function setWalkSpeed(value)
+	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+	end
+	
+	local function setJumpHeight(value)
+	    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = value
+	end
+	
+	walkspeedSlider = UniversalSection:Slider("Walkspeed (may not work for some games)", 16, 500, 16, function(value)
+	    setWalkSpeed(value)
+	end)
+	
+	UniversalSection:Button("Reset WalkSpeed", function()
+	    local defaultValue = 16
+	    walkspeedSlider:Change(defaultValue)
+	    setWalkSpeed(defaultValue)
+	end)
+	
+	jumpHeightSlider = UniversalSection:Slider("JumpHeight (may not work for some games)", 16, 350, 16, function(value)
+	    setJumpHeight(value)
+	end)
+	
+	UniversalSection:Button("Reset JumpHeight", function()
+	    local defaultValue = 16
+	    jumpHeightSlider:Change(defaultValue)
+	    setJumpHeight(defaultValue)
+	end)
+	
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+	    if input.UserInputType == Enum.UserInputType.MouseMovement then
+	        -- Update WalkSpeed and JumpHeight continuously while dragging the slider
+	        setWalkSpeed(walkspeedSlider:GetValue())
+	        setJumpHeight(jumpHeightSlider:GetValue())
+	    end
+	end)
+	UniversalSection:Seperator() 
+	UniversalSection:Label("Scripts")  
+    UniversalSection:Seperator() 
     UniversalSection:Button("Flight", function()
         loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
     end)
@@ -44,6 +68,23 @@ local AlterHub = Window:Server("Alter-Hub", "")
         loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()   
     end)
 
+    UniversalSection:Button("Simple Spy", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua'))()
+    end)
+    
+    UniversalSection:Seperator() 
+	UniversalSection:Label("Script Hubs")  
+    UniversalSection:Seperator() 
+
+    UniversalSection:Button("Owl Hub(ESP/Aim Bot)", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+    end)
+    UniversalSection:Button("Project Meow", function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Project-Meow_421"))()
+    end)
+
+
+
 --Project_Slayers
     local Project_SlayersSection = AlterHub:Channel("Project Slayers")
 
@@ -58,12 +99,13 @@ local AlterHub = Window:Server("Alter-Hub", "")
 
     end)
 
-    Project_SlayersSection:Button("auto farm, inf stamina, inf breathing and more", function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-    end)
     Project_SlayersSection:Button("Lead Hub", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
     end)
+    Project_SlayersSection:Button("Carly Hub (Invis Script)", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lmmake/fun/main/projectslayer.lua"))()
+    end)
+
 
 --Blox_Fruits
     local Blox_FruitsSection = AlterHub:Channel("Blox Fruits")
@@ -98,14 +140,6 @@ local AlterHub = Window:Server("Alter-Hub", "")
         loadstring(game:HttpGet("https://pastebin.com/raw/BdvUGb2q"))()
     end)
     
-
---Project_Meow
-    local Project_MeowSection = AlterHub:Channel("Project Meow")
-
-    Project_MeowSection:Button("Project Meow", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Project-Meow_421"))()
-    end)
-
 -- DOORS
     local DOORSSection = AlterHub:Channel("DOORS")
 
@@ -224,5 +258,6 @@ local AlterHub = Window:Server("Alter-Hub", "")
     Flee_The_FacilitySection:Button("Flee The Facility", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Drifty96/ftfgui/main/ftfgui", true))()
     end)
+  
 -- Load Notification
     Library:Notification("Notification", "Alter-hub GUI loaded!", "Okay!")
