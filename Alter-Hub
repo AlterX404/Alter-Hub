@@ -83,6 +83,9 @@ local AlterHub = Window:Server("Alter-Hub", "")
         loadstring(game:HttpGet("https://rawscripts.net/raw/Project-Meow_421"))()
     end)
 
+    UniversalSection:Button("NukeVsCity Hub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+    end)
 
 
 --Project_Slayers
@@ -102,9 +105,15 @@ local AlterHub = Window:Server("Alter-Hub", "")
     Project_SlayersSection:Button("Lead Hub", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LeadMarker/Scripts/main/ProjectSlayer.lua"))()
     end)
+    
     Project_SlayersSection:Button("Carly Hub (Invis Script)", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/lmmake/fun/main/projectslayer.lua"))()
     end)
+
+    Project_SlayersSection:Button("Oni Hub", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kaa4801/OniHubV3/main/OniHubV2.txt"))()
+    end)
+
 
 
 --Blox_Fruits
@@ -261,6 +270,69 @@ local AlterHub = Window:Server("Alter-Hub", "")
 
 
 
---    
--- Load Notification
+--ASTD
+
+    local ASTDSection = AlterHub:Channel("All Star Tower Defense")
+        
+    ASTDSection:Button("All Star Tower Defense TrapHub", function()
+        repeat task.wait() until game:IsLoaded()
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/TrapHub.lua"))()-- Load Notification
+    end)    
+    ASTDSection:Seperator() 
+    ASTDSection:Button("karmapanda (WITH KEY)", function()
+        repeat task.wait() until game:IsLoaded()
+
+        loadstring(game:HttpGet('https://script.karmapanda.dev/'))()
+    end)
+
+--Ninja_Tycoon
+    local Ninja_TycoonSection = AlterHub:Channel("Ninja Tycoon")
+    
+    Ninja_TycoonSection:Button("auto steal auto collect and more", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/omokom55/FreeScripts/main/Ninja%20Tycoon", true))()
+    end)
+    
+    Ninja_TycoonSection:Button("Ninja Tycoon", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/omokom55/FreeScripts/main/Ninja%20Tycoon", true))()
+    end)
+
+    Ninja_TycoonSection:Button("Dragon hub (KEY SYSTEM)", function()
+        loadstring(game:HttpGet"https://thedragonslayer2.github.io")()
+        end)
+
+--FNAF_CO-OP
+    local FNAFSection = AlterHub:Channel("FNAF CO-OP")
+        
+    FNAFSection:Button("FNAF: Coop | Animatronic Esp, Infinite Sprint & More", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Asphronium/FnafCo-opGUI/main/fnafCo-opGUI.lua"))()
+    end)
+--Red vs Blue Plane Wars Script
+local RVBSection = AlterHub:Channel("Red vs Blue Plane Wars Script")
+        
+RVBSection:Button("it works when pistol is equipped!!!!!!!!!!!!!!!!!!!!!!!!", function()
+    while wait() do
+        pcall(function()
+            for i,v in pairs(game.Players:GetPlayers()) do
+            
+                if v.Team ~= game.Players.LocalPlayer.Team and v.Character.Humanoid.Health > 0 and v.Character:FindFirstChild("ForceField") == nil then
+                    local args = {
+                        [1] = v.Character.Head,
+                    [2] = v.Character.Head.Position
+                        }
+        
+                game:GetService("Players").LocalPlayer.Character.Pistol.FireNow:FireServer(unpack(args))
+                end
+            end
+        end)
+    end
+end)
+
+--Anime Adventures
+    local AnimeAdventuresSection = AlterHub:Channel("Anime Adventures")
+    AnimeAdventuresSection:Button("Anime Adventures [GUI - Full Auto Farm & More!]", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArponAG/Scripts/main/AnimeAdventures.lua"))()
+    end)
+
+--
     Library:Notification("Notification", "Alter-hub GUI loaded!", "Okay!")
