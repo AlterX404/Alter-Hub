@@ -570,10 +570,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Hub/m
 
     end)
 
-    UniversalSection:Button("Alter Hub Invisible (For PC)(Key \" ] \")", function()
+    UniversalSection:Button("Alter Hub Invisible (For PC)(Key \" E\")", function()
 
             local ScriptStarted = false
-            local Keybind = "]" --Set to whatever you want, has to be the name of a KeyCode Enum.
+            local Keybind = "E" --Set to whatever you want, has to be the name of a KeyCode Enum.
             local Transparency = true --Will make you slightly transparent when you are invisible. No reason to disable.
             local NoClip = false --Will make your fake character no clip.
 
