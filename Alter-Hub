@@ -291,6 +291,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Hub/m
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AlterX404/Alter-Troll-Hub/main/Alter%20Hub%20RTX"))()
 
     end)
+    end)
 
     UniversalSection:Seperator()
 
