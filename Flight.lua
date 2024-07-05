@@ -7,7 +7,7 @@ local speaker = game:GetService("Players").LocalPlayer
 local chr = game.Players.LocalPlayer.Character
 local hum = chr and chr:FindFirstChildWhichIsA("Humanoid") 
 
-nowe = true 
+nowe = false 
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 Title = "Fly GUI V3";
