@@ -898,7 +898,7 @@ function Library:create(options)
 
 	rawset(mt, "creditsContainer", creditsTab.container)
 
-	creditsTab:credit{Name = "Alter-X", Description = "Roblox Script Dev", Discord = "https://discord.gg/bf7yGFQShZ"}
+	creditsTab:credit{Name = "Alter-X", Description = "Roblox Script Dev", Discord = "https://discord.gg/bf7yGFQShZ",YouTube = "https://www.youtube.com/@alter-x9749"}
 	return mt
 end
 
@@ -2716,7 +2716,7 @@ function Library:credit(options)
 		Name = "Creditor",
 		Description = nil
 	}, options)
-	options.V3rmillion = options.V3rmillion or options.V3rm
+	options.YouTube = options.YouTube or options.youtube
 
 	local creditContainer = (self.creditsContainer or self.container):object("Frame", {
 		Theme = {BackgroundColor3 = "Secondary"},
@@ -2826,22 +2826,22 @@ function Library:credit(options)
 			end)
 		end
 
-		if options.V3rmillion then
-			local v3rmillionContainer = creditContainer:object("TextButton", {
+		if options.YouTube then
+			local YouTubeContainer = creditContainer:object("TextButton", {
 				AnchorPoint = Vector2.new(1, 1),
 				Size = UDim2.fromOffset(24, 24),
 				Position = UDim2.new(1, -40, 1, -8),
 				Theme = {BackgroundColor3 = {"Main", 10}}
-			}):round(5):tooltip("copy v3rm")
-			local v3rmillion = v3rmillionContainer:object("ImageLabel", {
-				Image = "http://www.roblox.com/asset/?id=8594086769",
+			}):round(5):tooltip("copy Youtube")
+			local YouTube = YouTubeContainer:object("ImageLabel", {
+				Image = "http://www.roblox.com/asset/?id=18894585336",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
 			})
 
-			v3rmillionContainer.MouseButton1Click:connect(function()
-				setclipboard(options.V3rmillion)
+			YouTubeContainer.MouseButton1Click:connect(function()
+				setclipboard(options.YouTube)
 			end)
 		end
 	end
