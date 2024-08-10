@@ -2834,7 +2834,7 @@ function Library:credit(options)
 				Theme = {BackgroundColor3 = {"Main", 10}}
 			}):round(5):tooltip("copy Youtube")
 			local YouTube = YouTubeContainer:object("ImageLabel", {
-				Image = "http://www.roblox.com/asset/?id=18894585336",
+				Image = "http://www.roblox.com/asset/?id=18894675951",
 				Size = UDim2.new(1, -4, 1, -4),
 				Centered = true,
 				BackgroundTransparency = 1
