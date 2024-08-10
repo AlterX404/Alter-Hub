@@ -414,7 +414,7 @@ function Library:create(options)
 		Name = "Alter Hub",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
-		Link = "Alter Hub On Top"
+		Link = "Alter-Hub"
 	}, options)
 
 	if getgenv and getgenv().MercuryUI then
