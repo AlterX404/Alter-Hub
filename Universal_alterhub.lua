@@ -1,22 +1,3 @@
-local Library = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-
-
-local Window = Fluent:CreateWindow({
-    Title = "Alter Hub",
-    SubTitle = "[V2.0.0]",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(543, 300),
-    Acrylic = false,
-    Theme = "Darker",
-    MinimizeKey = Enum.KeyCode.RightControl
-})
-local Tabs = {
-    Credits = Window:AddTab({ Title = "Credits", Icon = "subscript" }),
-    UniversalTab = Window:AddTab({ Title = "Universal Scripts", Icon = "circle" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
-}
 
 local walkspeedSlider
 local jumpHeightSlider
